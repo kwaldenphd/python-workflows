@@ -45,7 +45,7 @@ The author consulted the following the following resources when writing the obje
 - [How to Submit This Lab (and Show Your Work)](#how-to-submit-this-lab-and-show-your-work)
 - [Lab Notebook Questions](#lab-notebook-questions)
 
-[Click here](https://colab.research.google.com/drive/1dQzM39wN1XrpJtFZcWTpGKPinR2mFIs4?usp=sharing) to access the lab procedure as a Jupyter Notebook (Google Colab, ND Users).
+[Click here](https://colab.research.google.com/drive/1dxyRiPaa0IWDfvDXrf_xYcMJsAKSaixx?usp=sharing) to access the lab procedure as a Jupyter Notebook (Google Colab, ND Users).
 
 
 # Lecture & Live Coding
