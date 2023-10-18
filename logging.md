@@ -2,6 +2,8 @@
 
 <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license"><img style="border-width: 0;" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" alt="Creative Commons License" /></a>This tutorial was written by Katherine Walden and is licensed under a <a href="http://creativecommons.org/licenses/by-nc/4.0/" rel="license">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
+# Overview
+
 If you've never put a `print()` statement in your code to output a variable's value while the program is running, you have used a form of `logging` to debug your code. Python's `logging` module lets you record custom messages that output as part of your program. These `log` messages describe when the program reaches a point where a logging function is called and what variables have been specified at that point.
 
 Step one is to import the `logging` module and set up basic configuration for the module at the top of your `.py` file.
