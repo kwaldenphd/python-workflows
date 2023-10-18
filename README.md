@@ -38,15 +38,15 @@ The author consulted the following the following resources when writing the obje
 - [Lecture & Live Coding](#lecture--live-coding)
 - [Setup & Environment](#setup--environment)
 - [Lab Notebook Template](#lab-notebook-template)
-- [Overview](#overview)
-- [Python in Spyder](#python-in-spyder)
-- [Python & Jupyter Notebooks](#python--jupyter-notebooks) 
-  * [Google Colaboratory](#google-colaboratory)
+- [Authoring Enviornments](#authoring-environments)
+  * [Python in Spyder](#python-in-spyder)
+  * [Python & Jupyter Notebooks](#python--jupyter-notebooks) 
+- [Object-Oriented Workflows](#object-oriented-workflows)
+  * [Code Reuse & Modularity (aka a quick detour into modules, packages, and libraries)](#code-reuse--modularity-aka-a-quick-detour-into-modules-packages-and-libraries)
 - [How to Submit This Lab (and Show Your Work)](#how-to-submit-this-lab-and-show-your-work)
 - [Lab Notebook Questions](#lab-notebook-questions)
 
 [Click here](https://colab.research.google.com/drive/1dxyRiPaa0IWDfvDXrf_xYcMJsAKSaixx?usp=sharing) to access the lab procedure as a Jupyter Notebook (Google Colab, ND Users).
-
 
 # Lecture & Live Coding
 
@@ -111,7 +111,7 @@ If working in JupyterLab or another desktop IDE, upload the lab notebook templat
 
 If working in Google Colaboratory, submit the link to your notebook (checking sharing permissions, similar with Google Docs).
 
-# Overview 
+# Authoring Environments 
 
 Up to this point, we have used the browser-based IDE [Replit](https://repl.it/).
 
@@ -157,7 +157,7 @@ Once you are able to launch the Anaconda Navigator, click on the icons for the f
 
 The rest of this lab will introduce us to `Spyder`, a Python IDE with some similarities to Replit, and `JupyterLab,` a Python notebook authoring IDE. Not sure what notebooks are? Stay tuned!
 
-# Python in Spyder
+## Python in Spyder
 
 <table>
  <tr><td>
@@ -216,7 +216,7 @@ Go ahead and create an `EoC` folder and set that folder as your working director
 
 <blockquote>Q2: Take a program (<code>.py</code> file) from a previous lab or collaborative problem solving session and load it into Spyder. Explore how the program runs in a different IDE. In particular, explore Spyder's options to run portions or a selection of the larger program. How does this change the way you interact with the program?</blockquote>
 
-## Debugging
+### Debugging
 
 To paraphrase an old programming joke, writing code is 90% of the work of programming. Debugging is the other 90%. You've been working on a program for hours, your head hurts, and something still isn't working. We all know a version of that feeling.
 
@@ -237,7 +237,7 @@ Python errors will usually fall into three types: syntax, runtime, and semantic.
 
 The debugging strategies discussed here will focus on semantic errors but are useful for all types of errors.
 
-### Stepwise Debugging in Spyder
+#### Stepwise Debugging in Spyder
 
 Spyder will catch many syntax and runtime errors. Hover over a red `X` by any of your lines of code to see more information about a possible error.
 
@@ -278,11 +278,11 @@ First run the program without the debugger enabled. What happens? Debug the file
 
 <blockquote>Q4: How is Spyder different than previous IDEs? What do you see as strengths/advantages? What do you see as possible challenges?</blockquote>
 
-#### Other debugging approaches
+#### Other Debugging Approaches
 
 If you're interested in exploring other Python debugging workflows, specifically using `log`, Prof. Walden has prepared [an introductory guide](https://github.com/kwaldenphd/python-workflows/blob/main/logging.md).
 
-# Python & Jupyter Notebooks
+## Python & Jupyter Notebooks
 
 <table>
  <tr><td>
@@ -317,7 +317,7 @@ A few challenges or drawbacks:
 
 So when could you use Jupyter notebooks? Jupyter notebooks are fantastic tools for exploration. They also work well for documenting process, or in situations when you might need to alternate between code and other kinds of text (like say in a lab notebook).
 
-## What is Jupyter?
+### What is Jupyter?
 
 "Project Jupyter is a non-profit, open-source project, born out of the IPython Project in 2014 as it evolved to support interactive data science and scientific computing across all programming languages. Jupyter will always be 100% open-source software, free for all to use and released under the liberal terms of the modified BSD license" (["About Us"](https://jupyter.org/about), *Jupyter.org*)
 
@@ -344,7 +344,7 @@ The name Jupyter is a reference to the three core languages supported by the pro
  </ul>
  </blockquote>
  
-## Launching & Navigating JupyterLab
+### Launching & Navigating JupyterLab
 
 <p align="center"><img src="https://github.com/kwaldenphd/python-authoring-environments/blob/main/images/Anaconda_Navigator.png?raw=true" width="1000"></p>
 
@@ -358,7 +358,7 @@ It may take some time for the notebook to open in a browser window. The notebook
 
 The menu bar includes drop-down options used to manipulate the notebook functionality. The toolbar icons give you quick access to the most commonly-used features of the notebook environment.
 
-## Authoring in Jupyter Notebooks
+### Authoring in Jupyter Notebooks
 
 Once you've created a new Jupyter Notebook, we can start adding cells. What's this about cells? Have we entered an alternate College of Science universe? Code cells are the default type of cell. But why are there cells? Jupyter notebooks consist of a sequence of cells.
 
@@ -394,7 +394,7 @@ There are a few ways you can change a cell's type. One option is to select the c
  </ul>
  You are welcome to use a program (or programs) you've written for previous labs- original code is not required for this question. The main point for this question is to see how a Jupyter Notebook code cell executes a program.</blockquote>
 
-## Google CoLab: A Web-Based Alternative
+### Google CoLab: A Web-Based Alternative
 
 <table>
  <tr><td>
@@ -418,7 +418,7 @@ So far, our work in Python has focused on **procedural programming**, which Busb
 
 Object-oriented paradigms treat data types as an abstraction, **objects**. This lets us move beyond a particular programming language's built-in data types and data structures to have programming structures, **classes**, that are suited for particular data types and workflows. 
 
-### Classes
+## Classes
 
 Our work with functions is one step in the direction of object-oriented workflows. Let's walk through an example from Busbee & Braunschweig's *Programming Fundamentals* that illustrates the move from procedural to object-oriented programming workflows.
 - Citation: Dave Braunschweig, "[Objects and Classes](https://press.rebus.community/programmingfundamentals/chapter/objects-and-classes/)" in *Programming Fundamentals* (Rebus Press, 2018).
@@ -569,7 +569,7 @@ Student.hall = 'Sorin Hall'
 Student.intro() # access subclass method
 ```
 
-## Additional Resources
+### Additional Resources
 
 We're just scratching the surface for object-oriented programming workflows (in general and in Python).
 
@@ -590,12 +590,62 @@ If you're on the hunt for decent online Python resources, a couple not terrible 
 If you really want to get into the Python weeds...
 - [Python documentation on classes](https://docs.python.org/3/tutorial/classes.html)
 
-## Comprehension Check
+### Comprehension Check
 
 <table>
  <tr><td>
 <img src="https://github.com/kwaldenphd/internet/blob/main/images/clipboard.png?raw=true" alt="Clipboard icon" width="50"/></td>
   <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSegWqG-EsbjRi1zgWHKZ8TEJpAvskGuvO2V9QkbniQelA4ZnA/viewform?usp=sf_link">Object-Oriented Workflows Comprehension Check</a></td>
+  </tr>
+  </table>
+
+## Code Reuse & Modularity (aka a quick detour into modules, packages, and libraries)
+
+<table>
+ <tr><td>
+<img src="https://elearn.southampton.ac.uk/wp-content/blogs.dir/sites/64/2021/04/PanPan.png" alt="Panopto logo" width="50"/></td>
+<td><a href="https://notredame.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e652072c-176a-4490-b7b3-af360164bf8a">Modules, Packages & Libraries</a></td>
+  </tr>
+  </table>
+
+As we move forward in Python, we're going to be encountering the terms `package`, `module`, and `library.` All of these terms refer to external Python programs that we can use in our program without having to recreate the entire original code. We can think of these resources as "expansion packs" for Python that expand or extend the programming language's built-in functionality.
+
+A few preliminary definitions...
+- A ***module*** is a Python file that typically includes specialized functions and variables. Modules typically have `.py` file extensions.
+- A single or simple directory of modules is called a ***package***. Packages are typically a simple directory with multiple modules.
+- A ***library*** includes blocks of code that can be reused within a program. Libraries are a collection of modules that have a much more complex directory/sub-directory/etc structure than packages
+
+Some modules, packages, and libraries are built-in to Python and require no additional installation. Others have to be installed (typically at the command line, or in the terminal) before you can import and use them in a program.
+
+Built-in functions don't require any extra steps to be able to access them in the programming environment. For example, you can see the source code for the `print()` function, contained in Python's [bltinmodule.c](https://github.com/python/cpython/blob/main/Python/bltinmodule.c#L1972) file in the [source code](https://github.com/python/cpython/blob/). But all we have to do is use the function name in our program.
+
+<p align="center"><img src="https://github.com/kwaldenphd/python-functions/blob/main/images/python_package.png?raw=true" width="500"></p>
+
+In this example, we have a `game` package that includes `sound`, `image`, and `level` sub-packages. Each of those sub-packages includes specific modules. For example, the `sound` sub-package includes the `load.py`, `play.py`, and `pause.py` modules.
+
+We can bring these modules into our program using an `import` statement.
+
+For example, let's say we wanted to bring the `start.py` module from the `level` sub-package into our program.
+
+We could do this using the following `import` statement at the start of our program.
+
+```Python
+from game.level import start
+```
+
+Now, we would be able to access any of the functions (or other code) contained in the `start.py` module, because we have **imported** them into our program.
+
+For more on modules, packages, and libraries in Python:
+- Programmiz, "[Python Package](https://www.programiz.com/python-programming/package)
+- GeeksForGeeks, "[What is the difference between Python's Module, Package and Library?](https://www.geeksforgeeks.org/what-is-the-difference-between-pythons-module-package-and-library/)" (30 September 2022)
+- John Sturtz, "[Python Modules and Packages - An Introduction](https://realpython.com/python-modules-packages/)" *Real Python*
+
+### Comprehension Check
+
+<table>
+ <tr><td>
+<img src="https://github.com/kwaldenphd/internet/blob/main/images/clipboard.png?raw=true" alt="Clipboard icon" width="50"/></td>
+  <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSctIknF2mA209zKSFH7lAA_6dBg9HoAmYDBg58QqNk37YgBVA/viewform?usp=sf_link">Code Reuse & Modularity in Python Comprehension Check</a></td>
   </tr>
   </table>
 
