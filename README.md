@@ -27,7 +27,11 @@ The author consulted the following resources when writing the "Python authoring 
 - Quinn Dombrowski, Tassie Gniady, and David Kloster, "Introduction to Jupyter Notebooks," *The Programming Historian* 8 (2019), https://doi.org/10.46430/phen0087
 
 The author consulted the following the following resources when writing the object-oriented workflows sections:
-- PLACEHOLDER
+- Dave Braunschweig, "[Objects and Classes](https://press.rebus.community/programmingfundamentals/chapter/objects-and-classes/)" in *Programming Fundamentals* (Rebus Press, 2018).
+- Dave Braunschweig, "[Encapsulation](https://press.rebus.community/programmingfundamentals/chapter/encapsulation/)" in *Programming Fundamentals* (Rebus Press, 2018).
+- Dave Braunschweig, "[Inheritance](https://press.rebus.community/programmingfundamentals/chapter/inheritance_and_polymorphism/)" in *Programming Fundamentals* (Rebus Press, 2018).
+- Eric Matthes, "Chapter 9: Classes" in *Python Crash Course, 3rd edition* (No Starch Press; 2023). [Link to online access through Hesburgh Libraries](https://onesearch.library.nd.edu/permalink/f/1phik6l/ndu_aleph006326301).
+- Allen B. Downey, "Chapter 15: Classes and Objects" in *Think Python: How to Think Like A Computer Scientist, 2nd edition* (O'Reilly: 2016). [Link to access through Hesburgh Libraries](https://onesearch.library.nd.edu/permalink/f/1phik6l/ndu_aleph005139341).
 
 # Table of Contents
 
@@ -274,7 +278,9 @@ First run the program without the debugger enabled. What happens? Debug the file
 
 <blockquote>Q4: What type of error does this program return (syntax, runtime, semantic) and why? How would we go about modifying the program to address this error?</blockquote>
 
-<blockquote>Q5: Compare your experience working in Spyder to your experience working in Replit (or another Python IDE). What seems appealing about each? What seems challenging? Based on this experience, what is your preference, or are there situations in which you'd prefer one over the other?</blockquote>
+#### Other debugging approaches
+
+If you're interested in exploring other Python debugging workflows, specifically using `log`, Prof. Walden has prepared [an introductory guide](https://github.com/kwaldenphd/python-workflows/blob/main/logging.md).
 
 # Python & Jupyter Notebooks
 
@@ -371,7 +377,7 @@ To learn more about formatting text in markdown, visit Adam Pritchard's ["Markdo
 
 There are a few ways you can change a cell's type. One option is to select the cell type from the drop-down options. Another option is to select `Cell Type` from the `Cell` menu tab. 
 
-<blockquote>Q8: In a markdown cell, add text that includes the following style or formatting components:
+<blockquote>Q5: In a markdown cell, add text that includes the following style or formatting components:
  <ul>
   <li>Heading (h1, h2, h3, etc)</li>
   <li>Italics or bold text formatting</li>
@@ -381,16 +387,12 @@ There are a few ways you can change a cell's type. One option is to select the c
  NOTE: You will want to reference Adam Pritchard's <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet</a> resource when working on this question.
  </blockquote>
 
-<blockquote>Q10: In a code cell, write a simple Python program (or programs) that includes the following functions:
+<blockquote>Q6: In a code cell, write a simple Python program (or programs) that includes the following functions:
  <ul>
   <li><code>input()</code></li>
   <li><code>print()</code></li>
  </ul>
  You are welcome to use a program (or programs) you've written for previous labs- original code is not required for this question. The main point for this question is to see how a Jupyter Notebook code cell executes a program.</blockquote>
-
-QX: SOMETHING ON JUPYTER NOTEBOOKS
-
-Q14: Describe and compare your experience working in different Python IDEs. What seems appealing about each? What seems challenging? Based on this experience, what are some of your preferences, or are there situations in which you'd prefer a specific IDE (or Python authoring environment)?
 
 ## Google CoLab: A Web-Based Alternative
 
@@ -416,10 +418,12 @@ So far, our work in Python has focused on **procedural programming**, which Busb
 
 Object-oriented paradigms treat data types as an abstraction, **objects**. This lets us move beyond a particular programming language's built-in data types and data structures to have programming structures, **classes**, that are suited for particular data types and workflows. 
 
-Our work with functions is one step in the direction of object-oriented workflows. Let's walk through an example from Busbee & Braunschweig's *Programming Fundamentals* that illustrates the move from procedural to object-oriented programming workflows.
-- Citation: Dave Braunschweig, "[Objects and Classes](https://press.rebus.community/programmingfundamentals/chapter/objects-and-classes/)" in *Programming Fundamentals*
+### Classes
 
-"Objects and classes are often designed to represent real-world objects. Consider a door as an example of a real-world object. Most doors have limited functionality. They may be opened and closed, and locked and unlocked. In procedural programming, we might design functions to open, close, lock, and unlock a door, such as:
+Our work with functions is one step in the direction of object-oriented workflows. Let's walk through an example from Busbee & Braunschweig's *Programming Fundamentals* that illustrates the move from procedural to object-oriented programming workflows.
+- Citation: Dave Braunschweig, "[Objects and Classes](https://press.rebus.community/programmingfundamentals/chapter/objects-and-classes/)" in *Programming Fundamentals* (Rebus Press, 2018).
+
+<blockquote>"Objects and classes are often designed to represent real-world objects. Consider a door as an example of a real-world object. Most doors have limited functionality. They may be opened and closed, and locked and unlocked. In procedural programming, we might design functions to open, close, lock, and unlock a door, such as:</blockquote>
 
 ```
 # procedural programming with functions
@@ -429,9 +433,9 @@ LockDoor(door)
 UnlockDoor(door)
 ```
 
-*Prof. Walden's note: In this example, door is the object or piece of data the functions act on.*
+*Prof. Walden's note: In this example, door is still an object, but the functions that reference the object aren't connected or associated with it.*
 
-"Object-oriented programming combines code and data, so that, rather than having separate functions act on doors, we design doors that have methods that can act on themselves. Methods represent something the object can do, and are typically defined using verbs. Object-oriented door pseudocode might look like:
+<blockquote>"Object-oriented programming combines code and data, so that, rather than having separate functions act on doors, we design doors that have methods that can act on themselves. Methods represent something the object can do, and are typically defined using verbs. Object-oriented door pseudocode might look like:</blockquote>
 
 ```
 # object-oriented programming with methods
@@ -441,9 +445,9 @@ door.Lock()
 door.Unlock()
 ```
 
-*Prof. Walden's note: In this example, the door is a class or data type, and the actions are arguments that act on the object.*
+*Prof. Walden's note: In this example, the door is an object that exists in the program via a class, and the actions are arguments that act on the object.*
 
-"Objects may also have attributes, something the object is or has, and are typically defined using nouns or adjectives. Door attributes might include:
+<blockquote>"Objects may also have attributes, something the object is or has, and are typically defined using nouns or adjectives. Door attributes might include:</blockquote>
 
 ```
 # attributes that could be part of the class
@@ -454,25 +458,146 @@ door.Closed
 door.Locked
 ```
 
-"When we write code to define a generic door, we would create a door class. The door class would contain all of the methods a door can perform and all of the attributes a door might have. We would then create instances of the class (objects) to represent specific doors, such as a front door, back door, or room door on a house, or a left door and right door on a car."
+<blockquote>"When we write code to define a generic door, we would create a door class. The door class would contain all of the methods a door can perform and all of the attributes a door might have. We would then create instances of the class (objects) to represent specific doors, such as a front door, back door, or room door on a house, or a left door and right door on a car."</blockquote>
 
-So let's move this into Python
+So let's move this into Python, creating a `dog` class that incocporates a few key attributes and actions (i.e. `methods`). Some core components of our class...
+- Creating the `dog` object
+- Assigning attributes, specifically `name` and `age`
+- Determining actions, specifically `sit` and `roll over`
 
-Allen B. Downey, *Think Python* "Chapter 15: Classes and Objects"
+```Python
+# this example is adapted from Chapter 9, pp 158, in Eric Matthes' _Python Crash Course_ book
 
-Eric Matthes *Python Crash Course* Chapter 9: Classes
+class Dog: # initiate the class
+ """A simple attempt to model a dog"""
 
-WORK IN WHATEVER IDE YOU WANT FOR THIS SECTION
+  def __init__(self, name, age): # initial function to create the object and assign some attributes
+   """Initialize name and age attributes"""
+   self.name = name
+   self.age = age
 
-## Classes
+  def sit(self): # function to assign sit method
+   """Simulate a dog sitting in response to a command"""
+   print(f"{self.name} is now sitting.")
 
-## Objects
+ def roll_over(self): # function to assign roll_over method
+   """Simulate rolling over in response to a command"""
+   print(f"{self.name} is rolled over!")
+```
+
+As with other function definitions, this program doesn't return any output. Let's walk through this example:
+- `class` initiates the class
+- `__init__` is the initial function
+- The `self` parameter (you could call this anything, but this exapmle uses `self`) references the current instance of the class
+- Subsequent named functions (using the `def` keyword) assign additional atrributes or actions
+
+The `Dog` class could refer to any `dog` abstraction- let's create an **instance** of the class, specific for the Walden family dog, Sandy Koufax.
+
+SANDY PICTURE
+
+```Python
+myDog = Dog('Sandy', '9') # create an instance of the class
+print(f"My dog's name is {myDog.name}.") # output instance attribute
+print(f"My dog is {myDog.age} years old.") # output instance attribute
+```
+
+We can use the `dot notation (.)` to access attributes or call methods from the class.
+
+```Python
+myDog.sit() # sit method
+myDog.roll_over() # roll over method
+```
+
+A quick recap:
+- An `object` is a programming abstraction that brings together data and procedures. Object-oriented programming workflows are an alterative to strictly procedural workflows.
+- A `class` is Python's mechanism for creating an object. Classes can include `methods` and `attributes`.
+- An `instance` is a particular instance of a `class`.
 
 ## Inheritance
 
+Let's imagine a scenario in which you need to create classes for members of the Notre Dame community. You might need specific classes for `undergraduate students`, `graduate students`, `faculty`, `staff`, `alumni`, `family members`, etc. While the classes would be different, they would all likely share some common elements.
+
+Rather than repeat all of those common elements, we could use **inheritance** to create a hierarchy of classes. We could start with a parent `person` class that lays out the common elements, and then create sub-classes that would have distinct properties but also **inherit** properties from the parent class. 
+
+To put that another way:
+
+<blockquote>"Inheritance is a way of arranging objects in a hierarchy from the most general to the most specific. An object which inherits from another object is considered to be a subtype of that object. An example might include Instructor and Student, each of which inherit from Person. When we can describe the relationship between two objects using the phrase is-a, that relationship is inheritance." (Dave Braunschweig, "<a href="https://press.rebus.community/programmingfundamentals/chapter/inheritance_and_polymorphism/">Inheritance and Polymorphism</a>" in <em>Programming Fundamentals</em></blockquote>
+
+Let's create our parent (or `base`) class, `Person`.
+
+```Python
+class Person: # assign class
+  def __init__(self, fname, lname): # initial function
+    self.firstname = fname # first name
+    self.lastname = lname # last name
+
+  def printname(self): # printname function
+    print(self.firstname, self.lastname)
+```
+
+To create an instance of the parent class:
+
+```Python
+x = Person("Knute", "Rockne") # create instance
+x.printname() # use printname method
+```
+
+Now let's create a `Student` subclass.
+
+```Python
+class Student(Person): # assign subclass
+ def __init__(self, fname, lname): # initial function
+  super().__init__(fname, lname) # super function to inherit parent properties
+  self.graduationYear = year # new properties for the subclass
+  self.classYear = classYear
+  self.major = major
+  self.hall = hall
+
+def intro(self): # new method for the subclass
+  print(f"{self.firstname} {self.lastname} is a {self.classYear} majoring in {self.major}, and lives in {self.hall}. They will graduate in Spring {self.graduationYear}.")
+```
+
+Then, we can create an instance of the `Student` subclass.
+
+```Python
+y = Student("Knute", "Rockne") # create instance
+
+Student.graduationYear = '1914' # assign values to attributes
+Student.major = 'Chemistry & Pharmacology'
+Student.hall = 'Sorin Hall'
+
+Student.intro() # access subclass method
+```
+
 ## Additional Resources
 
+We're just scratching the surface for object-oriented programming workflows (in general and in Python).
+
+For more conceptual background:
+- Dave Braunschweig, "[Objects and Classes](https://press.rebus.community/programmingfundamentals/chapter/objects-and-classes/)" in *Programming Fundamentals* (Rebus Press, 2018).
+- Dave Braunschweig, "[Encapsulation](https://press.rebus.community/programmingfundamentals/chapter/encapsulation/)" in *Programming Fundamentals* (Rebus Press, 2018).
+- Dave Braunschweig, "[Inheritance](https://press.rebus.community/programmingfundamentals/chapter/inheritance_and_polymorphism/)" in *Programming Fundamentals* (Rebus Press, 2018).
+
+For more on objects & classes (and related concepts) in Python:
+- Eric Matthes, "Chapter 9: Classes" in *Python Crash Course, 3rd edition* (No Starch Press; 2023). [Link to online access through Hesburgh Libraries](https://onesearch.library.nd.edu/permalink/f/1phik6l/ndu_aleph006326301).
+- Allen B. Downey, "Chapter 15: Classes and Objects" in *Think Python: How to Think Like A Computer Scientist, 2nd edition* (O'Reilly: 2016). [Link to access through Hesburgh Libraries](https://onesearch.library.nd.edu/permalink/f/1phik6l/ndu_aleph005139341).
+
+If you're on the hunt for decent online Python resources, a couple not terrible starting points...
+- [Geeks for Geeks, "Python Classes and Objects"](https://www.geeksforgeeks.org/python-classes-and-objects/)
+- [W3Schools, "Python Classes and Objects"](https://www.w3schools.com/python/python_classes.asp)
+- [W3Schools, "Python Inheritance"](https://www.w3schools.com/python/python_inheritance.asp)
+
+If you really want to get into the Python weeds...
+- [Python documentation on classes](https://docs.python.org/3/tutorial/classes.html)
+
 ## Comprehension Check
+
+<table>
+ <tr><td>
+<img src="https://github.com/kwaldenphd/internet/blob/main/images/clipboard.png?raw=true" alt="Clipboard icon" width="50"/></td>
+  <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSegWqG-EsbjRi1zgWHKZ8TEJpAvskGuvO2V9QkbniQelA4ZnA/viewform?usp=sf_link">Object-Oriented Workflows Comprehension Check</a></td>
+  </tr>
+  </table>
 
 # How to Submit This Lab (and show your work)
 
@@ -496,3 +621,39 @@ If working in Google Colaboratory, submit the link to your notebook (checking sh
 [Click here](https://colab.research.google.com/drive/13XsSSsqt3AmjLYKjdTn0pvQ1406anah3?usp=sharing) to access the lab notebook template as a Jupyter Notebook (Google CoLab, ND Users).
 
 To download the notebok from Google Colaboratory (as a `.ipynb` file): `File` (top-left corner) -> `Download` -> `Download as .ipynb`. Once you have downloaded the file on your local computer, you can move it into a designated folder for this lab/class.
+
+Q1: Work through the <a href="https://docs.spyder-ide.org/current/videos/first-steps-with-spyder.html">"First Steps with Spyder"</a>resources provided in the Spyder documentation. That includes two 3.5 minute videos that introduce you to the basics of the Spyder IDE and how to get started with Python in Spyder. Describe your experience getting  started with Spyder using  these materials/resources.
+
+Q2: How is Spyder different than previous IDEs? What do you see as strengths/advantages? What do you see as possible challenges?
+
+Q3: What type of error does this program return (syntax, runtime, semantic) and why? How would we go about modifying the program to address this error?
+
+```Python
+# function definition
+def printNTimes(message, x):
+ for x in range(x):
+  print(message)
+
+# get inputs
+phrase = input("Enter your message here: ") # input statement for string
+times = int(input("How many times do you want this statement to print? Enter a number value.")) # input statement for number of times
+
+# function call
+printNTimes(message, x)
+```
+
+Q4: Take a `.py` file from a previous lab and load it into Spyder. Explore how the program runs in a different IDE. In particular, explore Spyder's options to run portions or a selection of the larger program. How does this change the way you interact with the program?
+
+Q5: In a markdown cell, add text that includes the following style or formatting components:
+- Heading (h1, h2, h3, etc)
+- Italics or bold text formatting
+- Unordered (or bulleted point) list
+- Link
+
+NOTE: You will want to reference Adam Pritchard's <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet</a> resource when working on this question.
+
+Q6: In a code cell, write a simple Python program (or programs) that includes the following functions:
+- `input()`
+- `print()`
+
+You are welcome to use a program (or programs) you've written for previous labs- original code is not required for this question. The main point for this question is to see how a Jupyter Notebook code cell executes a program.
