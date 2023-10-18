@@ -214,9 +214,7 @@ Go ahead and create an `EoC` folder and set that folder as your working director
 
 <blockquote>Q1: Work through the <a href="https://docs.spyder-ide.org/current/videos/first-steps-with-spyder.html">"First Steps with Spyder"</a>resources provided in the Spyder documentation. That includes two 3.5 minute videos that introduce you to the basics of the Spyder IDE and how to get started with Python in Spyder. Describe your experience getting  started with Spyder using  these materials/resources.</blockquote>
 
-<blockquote>Q2: How is Spyder different than previous IDEs? What do you see as strengths/advantages? What do you see as possible challenges?</blockquote>
-
-<blockquote>Q3: Take a program (<code>.py</code> file) from a previous lab or collaborative problem solving session and load it into Spyder. Explore how the program runs in a different IDE. In particular, explore Spyder's options to run portions or a selection of the larger program. How does this change the way you interact with the program?</blockquote>
+<blockquote>Q2: Take a program (<code>.py</code> file) from a previous lab or collaborative problem solving session and load it into Spyder. Explore how the program runs in a different IDE. In particular, explore Spyder's options to run portions or a selection of the larger program. How does this change the way you interact with the program?</blockquote>
 
 ## Debugging
 
@@ -276,7 +274,9 @@ First run the program without the debugger enabled. What happens? Debug the file
 - Functions in this sample program include `print()` and `input()`
 - You can always `Step Out` if you accidently step into a function
 
-<blockquote>Q4: What type of error does this program return (syntax, runtime, semantic) and why? How would we go about modifying the program to address this error?</blockquote>
+<blockquote>Q3: What type of error does this program return (syntax, runtime, semantic) and why? How would we go about modifying the program to address this error?</blockquote>
+
+<blockquote>Q4: How is Spyder different than previous IDEs? What do you see as strengths/advantages? What do you see as possible challenges?</blockquote>
 
 #### Other debugging approaches
 
@@ -624,9 +624,7 @@ To download the notebok from Google Colaboratory (as a `.ipynb` file): `File` (t
 
 Q1: Work through the <a href="https://docs.spyder-ide.org/current/videos/first-steps-with-spyder.html">"First Steps with Spyder"</a>resources provided in the Spyder documentation. That includes two 3.5 minute videos that introduce you to the basics of the Spyder IDE and how to get started with Python in Spyder. Describe your experience getting  started with Spyder using  these materials/resources.
 
-Q2: How is Spyder different than previous IDEs? What do you see as strengths/advantages? What do you see as possible challenges?
-
-Q3: What type of error does this program return (syntax, runtime, semantic) and why? How would we go about modifying the program to address this error?
+Q2: What type of error does this program return (syntax, runtime, semantic) and why? How would we go about modifying the program to address this error?
 
 ```Python
 # function definition
@@ -642,7 +640,9 @@ times = int(input("How many times do you want this statement to print? Enter a n
 printNTimes(message, x)
 ```
 
-Q4: Take a `.py` file from a previous lab and load it into Spyder. Explore how the program runs in a different IDE. In particular, explore Spyder's options to run portions or a selection of the larger program. How does this change the way you interact with the program?
+Q3: Take a `.py` file from a previous lab and load it into Spyder. Explore how the program runs in a different IDE. In particular, explore Spyder's options to run portions or a selection of the larger program. How does this change the way you interact with the program?
+
+Q4: How is Spyder different than previous IDEs? What do you see as strengths/advantages? What do you see as possible challenges?
 
 Q5: In a markdown cell, add text that includes the following style or formatting components:
 - Heading (h1, h2, h3, etc)
