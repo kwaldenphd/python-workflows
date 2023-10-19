@@ -212,8 +212,6 @@ Go ahead and create an `EoC` folder and set that folder as your working director
 
 <blockquote>Q1: Work through the <a href="https://docs.spyder-ide.org/current/videos/first-steps-with-spyder.html">"First Steps with Spyder"</a>resources provided in the Spyder documentation. That includes two 3.5 minute videos that introduce you to the basics of the Spyder IDE and how to get started with Python in Spyder. Describe your experience getting  started with Spyder using  these materials/resources.</blockquote>
 
-<blockquote>Q2: Take a program (<code>.py</code> file) from a previous lab or collaborative problem solving session and load it into Spyder. Explore how the program runs in a different IDE. In particular, explore Spyder's options to run portions or a selection of the larger program. How does this change the way you interact with the program?</blockquote>
-
 ### Debugging
 
 To paraphrase an old programming joke, writing code is 90% of the work of programming. Debugging is the other 90%. You've been working on a program for hours, your head hurts, and something still isn't working. We all know a version of that feeling.
@@ -272,7 +270,9 @@ First run the program without the debugger enabled. What happens? Debug the file
 - Functions in this sample program include `print()` and `input()`
 - You can always `Step Out` if you accidently step into a function
 
-<blockquote>Q3: What type of error does this program return (syntax, runtime, semantic) and why? How would we go about modifying the program to address this error?</blockquote>
+<blockquote>Q2: What type of error does this program return (syntax, runtime, semantic) and why? How would we go about modifying the program to address this error?</blockquote>
+
+<blockquote>Q3: Take a program (<code>.py</code> file) from a previous lab or collaborative problem solving session and load it into Spyder. Explore how the program runs in a different IDE. In particular, explore Spyder's options to run portions or a selection of the larger program. How does this change the way you interact with the program?</blockquote>
 
 <blockquote>Q4: How is Spyder different than previous IDEs? What do you see as strengths/advantages? What do you see as possible challenges?</blockquote>
 
@@ -467,20 +467,20 @@ So let's move this into Python, creating a `dog` class that incocporates a few k
 # this example is adapted from Chapter 9, pp 158, in Eric Matthes' _Python Crash Course_ book
 
 class Dog: # initiate the class
- """A simple attempt to model a dog"""
-
+  """A simple attempt to model a dog"""
+  
   def __init__(self, name, age): # initial function to create the object and assign some attributes
-   """Initialize name and age attributes"""
-   self.name = name
-   self.age = age
-
+    """Initialize name and age attributes"""
+    self.name = name
+    self.age = age
+  
   def sit(self): # function to assign sit method
-   """Simulate a dog sitting in response to a command"""
-   print(f"{self.name} is now sitting.")
-
- def roll_over(self): # function to assign roll_over method
-   """Simulate rolling over in response to a command"""
-   print(f"{self.name} is rolled over!")
+    """Simulate a dog sitting in response to a command"""
+    print(f"{self.name} is now sitting.")
+  
+  def roll_over(self): # function to assign roll_over method
+    """Simulate rolling over in response to a command"""
+    print(f"{self.name} rolled over!")
 ```
 
 As with other function definitions, this program doesn't return any output. Let's walk through this example:
@@ -491,7 +491,7 @@ As with other function definitions, this program doesn't return any output. Let'
 
 The `Dog` class could refer to any `dog` abstraction- let's create an **instance** of the class, specific for the Walden family dog, Sandy Koufax.
 
-SANDY PICTURE
+<p align="center"><img src="https://github.com/kwaldenphd/python-workflows/blob/main/sandy.jpg?raw=true" width=50%></p>
 
 ```Python
 myDog = Dog('Sandy', '9') # create an instance of the class
@@ -525,11 +525,14 @@ Let's create our parent (or `base`) class, `Person`.
 
 ```Python
 class Person: # assign class
+  """Class to identify a person"""
   def __init__(self, fname, lname): # initial function
-    self.firstname = fname # first name
-    self.lastname = lname # last name
+    """Initializing function"""
+    self.firstname = fname
+    self.lastname = lname
 
   def printname(self): # printname function
+    """Function to concatenate first name and last name"""
     print(self.firstname, self.lastname)
 ```
 
@@ -543,13 +546,15 @@ x.printname() # use printname method
 Now let's create a `Student` subclass.
 
 ```Python
-class Student(Person): # assign subclass
- def __init__(self, fname, lname): # initial function
-  super().__init__(fname, lname) # super function to inherit parent properties
-  self.graduationYear = year # new properties for the subclass
-  self.classYear = classYear
-  self.major = major
-  self.hall = hall
+class Student(Person):# assign subclass
+  """Student subclass of parent class"""
+
+  def __init__(self, fname, lname): # initial function
+    super().__init__(fname, lname) # super function to inherit parent properties
+    self.graduationYear = None # new properties for the subclass
+    self.classYear = None
+    self.major = None
+    self.hall = None
 
 def intro(self): # new method for the subclass
   print(f"{self.firstname} {self.lastname} is a {self.classYear} majoring in {self.major}, and lives in {self.hall}. They will graduate in Spring {self.graduationYear}.")
@@ -560,11 +565,12 @@ Then, we can create an instance of the `Student` subclass.
 ```Python
 y = Student("Knute", "Rockne") # create instance
 
-Student.graduationYear = '1914' # assign values to attributes
-Student.major = 'Chemistry & Pharmacology'
-Student.hall = 'Sorin Hall'
+y.classYear = 'Senior'
+y.graduationYear = '1914' # assign values to attributes
+y.major = 'Chemistry & Pharmacology'
+y.hall = 'Sorin Hall'
 
-Student.intro() # access subclass method
+y.intro() # access subclass method
 ```
 
 ### Additional Resources
